@@ -1,0 +1,125 @@
+body {
+    background: linear-gradient(to bottom, #000, #0f172a);
+    padding: 80px 20px;
+    font-family: 'Inter', Arial, sans-serif;
+    color: white;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+.scroll-indicator {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+.section {
+    padding: 80px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.layer-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.layer-card:hover {
+    transform: translateY(-5px);
+}
+
+#progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: linear-gradient(to right, #22c55e, #3b82f6, #f87171);
+    width: 0%;
+    z-index: 9999;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.caution-wrapper {
+    width: 100%;
+    overflow: hidden;
+    margin: 60px 0;
+}
+
+.caution-tape {
+    background: repeating-linear-gradient(
+        45deg,
+        #facc15,
+        #facc15 20px,
+        #000 20px,
+        #000 40px
+    );
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    letter-spacing: 2px;
+    font-size: 14px;
+    white-space: nowrap;
+    animation: slideTape 10s linear infinite;
+}
+
+@keyframes slideTape {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 200px 0;
+    }
+}
